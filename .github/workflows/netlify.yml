@@ -12,7 +12,7 @@ jobs:
         
         # Runs a single command using the runners shell
       - name: build document
-        run: npx gatsby build
+        run: npm install && npx gatsby build
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.0
