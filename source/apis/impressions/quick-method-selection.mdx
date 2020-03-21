@@ -6,17 +6,20 @@ description: Through this impression we understand how we can configure the requ
 
 ## Overview
 
-The `Body` tab in the `Request panel` contains of 2 major components for configuring your API request body.
+The `Body` tab in the `Request panel` contains of 3 major components for configuring your API request body.
+    - Quick method selection
+    - Quick body type selection
+    - Add Multiple Bodies
 
+## Quick method selection
 
+The quick method selection of the API app helps you quickly pick and change the request methods associated with your API request. This feature was designed with accessibility in mind to help developers switch through popular methods faster and check the response in real-time.
 
-The quick method selection of the API app in Firecamp helps you quickly pick and change the request methods associated with your API request. This feature was designed with accessibility in mind to help developers switch through popular methods faster and check the response in real-time. To get the list of all requests methods available, click the dropdown list in the URL bar of the API app.
+To get the list of all requests methods available, click the dropdown list in the URL bar of the API app.
 
 ## What are Request Methods?
 
-Request methods are used by protocols like `HTTP` at the times of request to indicate the desired action that needs to be performed for a given resource. Each of the request methods implements a different semantic and is made for different purposes. Additionally, some common features are shared by a group of them.
-
-Guidelines suggest using a specific request method on a specific type of call made to the server/endpoint (though technically it is possible to violate this guideline, yet it is highly discouraged).
+Request methods are used by protocols like `HTTP` at the times of request to indicate the desired action that needs to be performed for a given resource. Each of the request methods implements a different semantic and is made for different purposes.
 
 ## Request Methods used in Firecamp API app
 
@@ -33,6 +36,35 @@ Firecamp too makes use of request methods that acts on requests to the API endpo
 - **LINK** - The `LINK` method adds meta-information (Object header information) to an object, without modifying the object's content.
 - **UNLINK** - This `UNLINK` method deletes metainformation about an object. Only headers exactly matching the headers given are removed.
 
-## Additional Resources & References
+> Placeholder For Screenshot
 
-- MDN - [https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+## Quick Body Type Selection
+
+The `Quick Body Type Selection` of available in the `Body` tab of the request panel helps you quickly choose and change the request body type associated with your API request. This feature was designed with accessibility in mind to help developers switch through popular body type faster and check the response for them in real-time.
+
+The body types available in the API app are as follows:
+
+- **Form and Query**
+ - Multipart
+ - Form URL Encode
+ - GraphQL Queries
+
+- **Raw**
+ - JSON
+ - XML
+ - TEXT
+
+- **Others**
+ - Binary
+ - Protocol Buffer
+
+- **Empty**
+ - No Body
+
+> Placeholder for Screenshot
+
+## Add Multiple Bodies
+
+To add multiple bodies in your request, click the `+` icon on the right side of the `Body` tab and enter a name for the new `body` in the dialog box that opens. Press the `Enter` key to add the body when finished.
+
+> Placeholder for GIF for adding and managing bodies.
