@@ -7,64 +7,47 @@ description: Through this impression we understand how we can configure the requ
 ## Overview
 
 The `Body` tab in the `Request panel` contains of 3 major components for configuring your API request body.
-    - Quick method selection
     - Quick body type selection
     - Add Multiple Bodies
 
-## Quick method selection
-
-The quick method selection of the API app helps you quickly pick and change the request methods associated with your API request. This feature was designed with accessibility in mind to help developers switch through popular methods faster and check the response in real-time.
-
-To get the list of all requests methods available, click the dropdown list in the URL bar of the API app.
-
-## What are Request Methods?
-
-Request methods are used by protocols like `HTTP` at the times of request to indicate the desired action that needs to be performed for a given resource. Each of the request methods implements a different semantic and is made for different purposes.
-
-## Request Methods used in Firecamp API app
-
-Firecamp too makes use of request methods that acts on requests to the API endpoint. These methods are as follows:
-
-- **GET** - The `GET` method is used to retrieve data and should have no other effect on the data.
-- **POST** - ****The `POST` method is used to submit an entity to the specified resource, often causing a change in state or modify the data.
-- **PATCH** - The `PATCH` method is used to apply partial modifications to a resource.
-- **PUT** - The `PUT` method replaces all current representations of the target resource with the request payload.
-- **DELETE** - The `DELETE` method deletes the specified resource.
-- **HEAD** - The `HEAD` method asks for a response identical to that of a `GET` request, but without the response body.
-- **OPTION** - The `OPTION` describes the communication options for the target resource.
-- **PURGE** - The `PURGE` is used for removing cached files from the server, but can be used for removing anything related to caching.
-- **LINK** - The `LINK` method adds meta-information (Object header information) to an object, without modifying the object's content.
-- **UNLINK** - This `UNLINK` method deletes metainformation about an object. Only headers exactly matching the headers given are removed.
-
-> Placeholder For Screenshot
-
 ## Quick Body Type Selection
 
-The `Quick Body Type Selection` of available in the `Body` tab of the request panel helps you quickly choose and change the request body type associated with your API request. This feature was designed with accessibility in mind to help developers switch through popular body type faster and check the response for them in real-time.
+The `Quick Body Type Selection` is available in the `Body` tab of the request panel helping you quickly choose and change the request body type associated with your API request. This feature was designed with accessibility in mind to help developers switch through popular body type faster and check the response for them in real-time.
 
 The body types available in the API app are as follows:
 
 - **Form and Query**
+Website Forms and Queries often send data as `multipart` through APIs. This can be tested in Firecamp by select one of the following from the `Quick Body Type Selection` section or the dropdown list in the `Body` tab.
  - Multipart
  - Form URL Encode
  - GraphQL Queries
 
 - **Raw**
- - JSON
- - XML
- - TEXT
+To send anything written as text, you can make use of the Raw body type. Select one of the following from the `Quick Body Type Selection` section or the dropdown list in the `Body` tab and Firecamp will add relevant headers to your request.
+  - TEXT
+  - JSON
+  - XML
 
 - **Others**
- - Binary
+ - Binary - Have data such as image, audio, and video files to send which can't be send normally with the request body. Firecamp got your back.
  - Protocol Buffer
 
 - **Empty**
  - No Body
+ No Body is the default option in Firecamp. One can easily use the quick selection features to switch between `body types` and `request method` alongwith adding multiple bodies if needed.
 
-> Placeholder for Screenshot
+> Placeholder
 
 ## Add Multiple Bodies
+
+Firecamp is all about easing developer's work. Hence, instead of creating two requests with different bodies. You can can just create one request with multiple bodies in Firecamp.
+
+> For example: If you like to test your APIs error response with 200/500/302 error code, then instead of having 3 different requests. You can replicate the same response based on 3 request bodies in one request.
 
 To add multiple bodies in your request, click the `+` icon on the right side of the `Body` tab and enter a name for the new `body` in the dialog box that opens. Press the `Enter` key to add the body when finished.
 
 > Placeholder for GIF for adding and managing bodies.
+
+## Quick method selection
+
+The quick method selection of the API app helps you quickly pick and change the request methods associated with your API request. This feature was designed with accessibility in mind to help developers switch through popular methods faster and check the response in real-time. To get the list of all requests methods available in Firecamp, check out the URL bar impression.
