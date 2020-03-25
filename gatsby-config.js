@@ -91,6 +91,7 @@ module.exports = {
 
               'apis/impressions/url-bar',
               'apis/impressions/request-panel',
+              'apis/impressions/request-body',
               'apis/impressions/response-panel',
               'apis/impressions/quick-body-type-selection',
               'apis/impressions/quick-method-selection',
