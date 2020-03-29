@@ -92,7 +92,7 @@ module.exports = {
               'apis/impressions/url-bar',
               'apis/impressions/request-panel',
               'apis/impressions/request-body',
-              'apis/impressions/authentication-type-selection',
+              'apis/impressions/authentications',
               'apis/impressions/headers',
               'apis/impressions/query-parameters',
               'apis/impressions/response-panel',
@@ -128,7 +128,7 @@ module.exports = {
               "websocket/impressions/message-collection-panel",
               "websocket/impressions/code-snippets-for-websockets",
             ]
-            
+
           }
         }
       }
