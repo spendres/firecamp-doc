@@ -82,7 +82,6 @@ module.exports = {
               'index'
             ],
             "HTTP APIs": [
-              // 'apis/actions/adding-&-managing-bodies-for-your-api-request',
               'apis/actions/sending-your-first-request',
               'apis/actions/observing-the-response-panel',
               'apis/actions/saving-your-requests',
@@ -92,16 +91,14 @@ module.exports = {
               'apis/impressions/url-bar',
               'apis/impressions/request-panel',
               'apis/impressions/request-body',
-              'apis/impressions/authentication-type-selection',
+              'apis/impressions/authentications',
               'apis/impressions/headers',
               'apis/impressions/query-parameters',
               'apis/impressions/response-panel',
               'apis/impressions/code-generator-for-requests',
-              'apis/impressions/api-endpoints',
             ],
 
             GraphQL: [
-              'graphql/impressions/graphql-endpoints',
               'graphql/impressions/url-bar',
               'graphql/impressions/request-methods',
               'graphql/impressions/playground',
@@ -128,7 +125,7 @@ module.exports = {
               "websocket/impressions/message-collection-panel",
               "websocket/impressions/code-snippets-for-websockets",
             ]
-            
+
           }
         }
       }
