@@ -6,32 +6,14 @@ description: Through this impression we understand more about the Request panel 
 
 ## Overview
 
-The request panel is made up of playground, collections, explorer and the variables panel on the bottom.
+The `Request Panel` in the GraphQL app is the one-stop hub for crafting, configuring, and saving your queries, subscriptions and mutations. Whether you are debugging your API or integrating 3rd party APIs, you can easily get started with Firecamp.
 
-Request panel is the area where you can craft, tinker and save your queries, subscriptions, and mutations in the GraphQL app. The playground is the base on which we can build your requests, with the help of collections and explorer.
+Through the `Request Panel`, you can get access to several components available in the app. These are as follows:
 
-## Passing Arguments in your queries
+1.  **Playground**
+2.  **Explorer**
+3.  **Collection**
+4.  **Headers**
+5.  **GraphQL Helper Documentation**
 
-The panel below playground is the variable window which lets you add values to arguments passed easily in your requests. Say for this `GetSingleHistory` query where we pass the `id` parameter.
-
-    query GetSingleHistory($id: ID!) {
-      __typename
-      history(id: $id) {
-        id
-        details
-      }
-    }
-
-The value for `id` can be added below in the variables window for easier access while running your requests.
-
-    {
-      "id": "1"
-    }
-
-If you have more than one request that is passing parameters in the playground then you can assign specific values for them by just clicking on them and seeing the name change to that specific query down in the variables panel.
-
-## Additional Resources
-
-- Playground
-- Explorer
-- Collections
+When you send a request to your GraphQL endpoint, Firecamp will show the response from the server in the `Response Panel` with the functionality to view, and copy the data received from the server along with other information.

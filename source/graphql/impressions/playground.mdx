@@ -10,6 +10,28 @@ The Firecamp GraphQL Playground enables you to work with GraphQL APIs to write q
 
 Learn more about how to use the GraphQL playground in through our Actions.
 
+
+## Passing Arguments in your queries
+
+The panel below playground is the variable window which lets you add values to arguments passed easily in your requests. Say for this `GetSingleHistory` query where we pass the `id` parameter.
+
+    query GetSingleHistory($id: ID!) {
+      __typename
+      history(id: $id) {
+        id
+        details
+      }
+    }
+
+The value for `id` can be added below in the variables window for easier access while running your requests.
+
+    {
+      "id": "1"
+    }
+
+If you have more than one request that is passing parameters in the playground then you can assign specific values for them by just clicking on them and seeing the name change to that specific query down in the variables panel.
+
+
 ## Additional Resources
 -
 -
