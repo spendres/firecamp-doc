@@ -86,7 +86,7 @@ module.exports = {
               'apis/actions/observing-the-response-panel',
               'apis/actions/saving-your-requests',
               'apis/actions/generating-code-snippets',
-              'apis/ations/writing-graphql-queries',
+              'apis/actions/writing-graphql-queries',
 
               'apis/impressions/url-bar',
               'apis/impressions/request-panel',
