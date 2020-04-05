@@ -1,16 +1,17 @@
 ---
 title: 08. Playing with Protobuf Request Body and Schema
 subtitle:
-description: How to generate code snippets for your APIs
+description: How to use a Protobuf schema 
 ---
 
 ### Prerequisites
 
+Protocol buffer is a method of serializing or encrypteing your data. A protobuf schema can be used to describe the structure of the API request or a query.
+
 In order to follow along with this Action, it is advised to go through the previous Actions and relevant Impressions. Make sure you have:
 
-- 
--
--
+- Set an API end-point 
+- Selected a method from the drop down or quick method type selection
 
 ### Directions
 
@@ -18,6 +19,11 @@ In order to follow along with this Action, it is advised to go through the previ
 removing key and value from json and only send values in a buffered stream from client to server or vice versa 
 vishwa and property is name
 encrypted or serialised data 
+1. Select `Protocol Buffer` from the `Quick Body Type Selector`. 
+2. Navigate to the `.Protocol Schema` tab in the `Response Panel` and write your Protobuf schema that describes the structure of your API request. 
+3. Move back to the `Body` tab to write the API request. Encode the request using a message type from the `Encode Message Type` menu at the bottom. This will encode the request body.
+4. To decode the response, use the same procedure by selecting a message type from the `Decode Message Type` menu. 
+5. This method i used to remove the repeating keys from the JSON body and will only send values in a buffered stream from client to server and vice versa. This leads to an improved request/response time.
 
 ### Short descriptive GIF (w ALT text)
 
