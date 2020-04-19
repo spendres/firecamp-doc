@@ -7,34 +7,37 @@ description: Learn to configure the Request body of your APIs
 ## Overview
 
 The `Body` tab in the `Request panel` contains of 3 major components for configuring your API request body.
+
     - Quick body type selection
     - Add Multiple Bodies
+    - Quick method selection
 
 ## Quick Body Type Selection
 
-The `Quick Body Type Selection` is available in the `Body` tab of the request panel helping you quickly choose and change the request body type associated with your API request. This feature was designed with accessibility in mind to help developers switch through popular body type faster and check the response for them in real-time.
+The `Quick Body Type Selection` is available in the `Body` tab of the request panel helping you quickly choose and change the request body type associated with your API request. This feature was designed with accessibility in mind to help developers switch through popular body types faster and check the response for them in real-time.
 
 The body types available in the API app are as follows:
 
 - **Form and Query**
-Website Forms and Queries often send data as `multipart` through APIs. This can be tested in Firecamp by select one of the following from the `Quick Body Type Selection` section or the dropdown list in the `Body` tab.
- - Multipart
- - Form URL Encode
- - GraphQL Queries
+
+  Website Forms and Queries often send data as `multipart` through APIs. This can be tested in Firecamp by selecting one of the following from the `Quick Body Type Selection` section or the dropdown list in the `Body` tab.
+  - Multipart
+  - Form URL Encode
+  - GraphQL Queries
 
 - **Raw**
-To send anything written as text, you can make use of the Raw body type. Select one of the following from the `Quick Body Type Selection` section or the dropdown list in the `Body` tab and Firecamp will add relevant headers to your request.
+
+  To send anything written as text, you can make use of the Raw body type. Select one of the following from the `Quick Body Type Selection` section or the dropdown list in the `Body` tab and Firecamp will add relevant headers to your request.
   - TEXT
   - JSON
   - XML
 
 - **Others**
- - Binary - Have data such as image, audio, and video files to send which can't be send normally with the request body. Firecamp got your back.
- - Protocol Buffer
+  - Binary - Have data such as image, audio, and video files to send which can't be sent normally with the request body, Firecamp got your back.
+  - Protocol Buffer
 
 - **Empty**
- - No Body
- No Body is the default option in Firecamp. One can easily use the quick selection features to switch between `body types` and `request method` alongwith adding multiple bodies if needed.
+  - No Body - No Body is the default option in Firecamp. One can easily use the quick selection features to switch between `body types` and `request method` along with adding multiple bodies if needed.
 
 > Placeholder
 
@@ -42,7 +45,7 @@ To send anything written as text, you can make use of the Raw body type. Select 
 
 Firecamp is all about easing developer's work. Hence, instead of creating two requests with different bodies. You can can just create one request with multiple bodies in Firecamp.
 
-> For example: If you like to test your APIs error response with 200/500/302 error code, then instead of having 3 different requests. You can replicate the same response based on 3 request bodies in one request.
+> **For example:** If you like to test your API's error response with 200/500/302 error code, then instead of having 3 different requests, You can replicate the same response based on 3 request bodies in one request.
 
 To add multiple bodies in your request, click the `+` icon on the right side of the `Body` tab and enter a name for the new `body` in the dialog box that opens. Press the `Enter` key to add the body when finished.
 
