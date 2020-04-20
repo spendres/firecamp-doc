@@ -10,7 +10,6 @@ module.exports = {
     },
     pathPrefix: '/',
     plugins: [
-      "gatsby-plugin-mdx",
       {
         resolve: 'gatsby-theme-apollo-docs',
         options: {

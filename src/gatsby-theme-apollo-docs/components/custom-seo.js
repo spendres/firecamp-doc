@@ -6,7 +6,7 @@ import {withPrefix} from 'gatsby';
 export default function CustomSEO({image, baseUrl, twitterHandle, ...props}) {
 
   const imagePath = withPrefix('/' + image);
-  console.log(props, imagePath, 8888)
+  // console.log(props, imagePath, 8888)
   return (
     <SEO {...props} twitterCard="summary_large_image" favicon="https://firecamp.io/images/fc-logo.png">
       <meta property="og:image" content={imagePath} />
