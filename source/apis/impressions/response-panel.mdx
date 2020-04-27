@@ -3,7 +3,8 @@ title: 07. Response Panel
 subtitle:
 description: Overview of the Response Panel of the API app
 ---
-
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 
 ## Overview
@@ -12,7 +13,13 @@ The response panel in the Firecamp API app is to view the information/data recei
 
 The panel provides a clear eagle-eye view of your response body as well as features to dive deeper into headers, cookies, timeline and performance benchmarks associated with your request.
 
-![Response Panel](../assets/res_panel.png)
+<Zoom>
+    <img
+        alt="Response Panel"
+        src="../assets/res_panel.jpg"
+        width="100%"
+    />
+</Zoom>
 
 Viewing the Response is not limited to only JSON/Text. Response body can be HTML, JSON, XML, Text, Image, GIF. Options like copy, fold and word wrap are also available through the utility icons. That way the API response body can be viewed, and styled as needed.
 
@@ -20,7 +27,13 @@ The response headers, cookies, and timelines for the response can be viewed by t
 
 ## Headers
 
-![Response Headers](../assets/res_headers.png)
+<Zoom>
+    <img
+        alt="Response Panel headers"
+        src="../assets/res_header.jpg"
+        width="100%"
+    />
+</Zoom>
 
 Response Headers are essentially metadata of the response. Here's how the response headers are represented under the `Headers` tab in Firecamp API app.
 
@@ -49,18 +62,36 @@ Response Headers are essentially metadata of the response. Here's how the respon
 
 `Cookies` are used for session management. Information regarding cookies can be accessed through the `Cookies` tab in the response panel.
 
-![Response Cookies](../assets/res_cookies.png)
+<Zoom>
+    <img
+        alt="Response Panel Cookies"
+        src="../assets/res_cookies.jpg"
+        width="100%"
+    />
+</Zoom>
 
 ## Timeline
 
 `Timeline` tab in Firecamp helps developers get an overview on their request. Timeline provides session information, request and response headers, size of response data received, server certificates and more. This goes to be a great tool to debug response of your API's as it provides all information in a raw and compiled form.
 
-![Response Timeline](../assets/res_timeline.png)
+<Zoom>
+    <img
+        alt="Response Panel Timeline"
+        src="../assets/res_timeline.jpg"
+        width="100%"
+    />
+</Zoom>
 
 
 ## Performance Benchmarks
 
-![Response Performance](../assets/res_perf.png)
+<Zoom>
+    <img
+        alt="Response Panel Performance"
+        src="../assets/res_perf.jpg"
+        width="100%"
+    />
+</Zoom>
 
 The performance benchmarks listed on the response panel helps the user know more about API's performance traits. The first number being the status code returned, next being the response time of the API listed in milliseconds and last being the data transferred in kilobytes.
 

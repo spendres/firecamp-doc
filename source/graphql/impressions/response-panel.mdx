@@ -4,19 +4,36 @@ subtitle:
 description: Through this impression we understand more about the Response Panel in the GraphQL app of Firecamp
 ---
 
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
+
 ## Overview
 
 The response panel in the Firecamp GraphQL app is to view the information/data received as part of the response by the server when the query is executed by the user.
 
 The panel provides a clear eagle-eye view of your response body as well as features to dive deeper into headers, cookies, timeline and performance benchmarks associated with your request.
 
-> Placeholder for the entire response body.
+<Zoom>
+    <img
+        alt="Response Panel"
+        src="../assets/res_panel.jpg"
+        width="100%"
+    />
+</Zoom>
 
 The Response body can be viewed in the form of JSON. Options like copy, fold and word wrap are also available through the utility icons. That way the GraphQL response body can be viewed, and styled as needed.
 
 The response headers, cookies, and timelines for the response can be viewed by toggling through tabs. The `copy json` and `copy text` can be used to copy information in any format that is required.
 
 ## Headers
+
+<Zoom>
+    <img
+        alt="Response Panel Headers"
+        src="../assets/res_headers.jpg"
+        width="100%"
+    />
+</Zoom>
 
 Response Headers are essentially metadata of the response. Here's how the response headers are represented under the `Headers` tab in Firecamp GraphQL app.
 
@@ -38,17 +55,27 @@ Response Headers are essentially metadata of the response. Here's how the respon
 
 `Cookies` are used for session management. Information regarding cookies can be accessed through the `Cookies` tab in the response panel.
 
-> Placeholder for cookies screenshot
-
 ## Timeline
 
 `Timeline` tab in Firecamp helps developers get an overview on their queries made. Timeline provides session information, request and response headers, size of response data received, and additional information if any. This goes to be a great tool to debug response of your GraphQL's as it provides all information in a raw and compiled form.
 
-> Placeholder for Screenshot
+<Zoom>
+    <img
+        alt="Response Panel Timeline"
+        src="../assets/timeline.jpg"
+        width="100%"
+    />
+</Zoom>
 
 ## Performance Benchmarks
 
-> Screenshot of GraphQL performance bar in response panel
+<Zoom>
+    <img
+        alt="Response Panel Performance"
+        src="../assets/perf.jpg"
+        width="100%"
+    />
+</Zoom>
 
 The performance benchmarks listed on the response panel helps the user know more about GraphQL's performance traits. The first number being the status code returned, next being the response time of the GraphQL listed in milliseconds and last being the data transferred in kilobytes.
 
