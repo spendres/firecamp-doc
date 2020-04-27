@@ -93,7 +93,22 @@ export default function SocialCard(props) {
 			>
 				{props.title.replace(/\s+(\S*)$/, "\xA0$1")}
 			</TextFit>
-			<h4>Firecamp</h4>
+			
+			
+			<TextFit
+				min={80}
+				max={120}
+				style={{
+					width: "100%",
+					height: 250,
+					marginBottom: "auto",
+					lineHeight: 1.2,
+					colors: "orange",
+				}}
+			>
+				Firecamp
+			</TextFit>
+
 		</div>
 	);
 }
