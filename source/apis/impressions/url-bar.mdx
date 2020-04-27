@@ -4,11 +4,18 @@ subtitle:
 description: Overview of the URL Bar in the API app
 ---
 
-// import { Link } from "gatsby";
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 ## Overview
 
-![URL Bar](../assets/url_bar.jpg)
+<Zoom>
+    <img
+        alt="that wanaka tree"
+        src="../assets/url_bar.jpg"
+        width="100%"
+    />
+</Zoom>
 _URL Bar_
 
 The URL bar in the API app is the hub for sending, saving and modifying requests.
@@ -39,7 +46,13 @@ You can make a selection of your desired Request Method from the `Quick Method S
 ## 2. URL Field
 The API endpoint can be specified in the URL field. This is the endpoint on which the request will be made when the `Send` button is clicked.
 
-![URL Bar with Request Method dropdown open](../assets/url_method.jpg)
+<Zoom>
+    <img
+        alt="that wanaka tree"
+        src="../assets/url_method.jpg"
+        width="100%"
+    />
+</Zoom>)
 _URL Bar with Request Method dropdown open_
 
 An **API endpoint** is a unique URL where requests sent by one program are answered and data in form of objects or collections of objects are returned from where the resource lives (Databases). In Firecamp, the URL bar can be used to enter API endpoints with request methods attached to it. **API endpoints** facilitate the interaction of one system with another system that takes care of the processing and storage of data.
