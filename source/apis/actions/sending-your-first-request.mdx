@@ -3,17 +3,19 @@ title: 01. Sending your First Request
 subtitle:
 description: Learn to send your first request with the API app
 ---
+import Zoom from 'react-medium-image-zoom';
 
 ## Prerequisites
 
 - Environment snippet should be set
 
 ## Directions
-
+To demonstrate flow we'll use the SpaceX APIs to test various operations. 
 1. Select your request method from either the drop down menu or the Quick Method Selection section.
-2. Set the API end-point in the URL bar.
-3. Select a body type from from either the drop down menu or the Quick Body Type Selection section
-4. Input an API payload in the content-type format inside the Request Panel.
+2. Set the following `https://api.spacexdata.com/v3/launches` API end-point in the URL bar. 
+3. Select a body type from either the drop-down menu or the Quick Body Type Selection section
+4. Input an API payload in the `content-type` format inside the Request Panel.
+5. Add the value in `param` section. ie. `flight_id`,`start/end`.
 5. Hit enter and observe the response.
 
 ## Additional information:
@@ -31,6 +33,14 @@ To test out APIs smoothly and to facilitate a quick response, create multiple bo
 Voila! Now you know how to send your first request.
 
 ## Short descriptive GIF (w ALT text)
+
+<Zoom>
+    <img
+        alt="Code Snippets"
+        src="../assets/sending_req.png"
+        width="100%"
+    />
+</Zoom>
 
 ## Additional resources
 -
