@@ -10,13 +10,18 @@ import Zoom from 'react-medium-image-zoom';
 - Environment snippet should be set
 
 ## Directions
-To demonstrate flow we'll use the SpaceX APIs to test various operations. 
-1. Select your request method from either the drop down menu or the Quick Method Selection section.
-2. Set the following `https://api.spacexdata.com/v3/launches` API end-point in the URL bar. 
-3. Select a body type from either the drop-down menu or the Quick Body Type Selection section
-4. Input an API payload in the `content-type` format inside the Request Panel.
-5. Add the value in `param` section. ie. `flight_id`,`start/end`.
-5. Hit enter and observe the response.
+To demonstrate flow we'll use the [JSON placeholder API](https://jsonplaceholder.typicode.com/) to test various operations. 
+1. Select the request method `POST` from either the drop-down menu or the Quick Method Selection section.
+2. Set the following `https://jsonplaceholder.typicode.com/posts` API end-point in the URL bar. 
+3. Select a `body type` as `JSON` from drop-down. Add body as shown below
+>
+`{
+    "userId": 102,
+    "id": 102,
+    "title": "This is request title", 
+    "body": "This is request body"
+  }`
+5. Hit enter and wait for API response.
 
 ## Additional information:
 
@@ -31,8 +36,6 @@ To test out APIs smoothly and to facilitate a quick response, create multiple bo
 4. Test you the API using different bodies smoothly.
 
 Voila! Now you know how to send your first request.
-
-## Short descriptive GIF (w ALT text)
 
 <Zoom>
     <img
