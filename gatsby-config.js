@@ -86,6 +86,7 @@ module.exports = {
               'apis/actions/saving-your-requests',
               'apis/actions/generating-code-snippets',
               'apis/actions/writing-graphql-queries',
+              'apis/actions/running-graphql-query',
 
               'apis/impressions/url-bar',
               'apis/impressions/request-panel',
@@ -123,6 +124,11 @@ module.exports = {
               "websocket/impressions/chatboard-panel",
               "websocket/impressions/message-collection-panel",
               "websocket/impressions/code-snippets-for-websockets",
+            ],
+
+            "Discover Firecamp": [
+              "discover firecamp/firecamp-for-teams/organization", 
+              "discover firecamp/firecamp-for-teams/workspaces",
             ]
 
           }
