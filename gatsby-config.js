@@ -78,7 +78,9 @@ module.exports = {
           },
           sidebarCategories: {
             null: [
-              'index'
+              'index',
+              "discover-firecamp/firecamp-for-teams/organization", 
+              "discover-firecamp/firecamp-for-teams/workspaces",
             ],
             "HTTP APIs": [
               'apis/actions/sending-your-first-request',
@@ -127,8 +129,7 @@ module.exports = {
             ],
 
             "Discover Firecamp": [
-              "discover firecamp/firecamp-for-teams/organization", 
-              "discover firecamp/firecamp-for-teams/workspaces",
+              
             ]
 
           }
