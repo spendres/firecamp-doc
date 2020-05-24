@@ -113,8 +113,9 @@ module.exports = {
               'graphql/actions/reviewing-the-response-panel',
               'graphql/actions/create-you-query-collection',
               'graphql/actions/saving-graphql-request',
-              'graphql/actions/using-variable-within-a-query'
-            ],
+              'graphql/actions/using-variable-within-a-query',
+              'graphql/actions/uploading-file-within-graphql-request'           
+             ],
 
             WebSocket: [
               "websocket/actions/establishing-your-first-websocket-connection",
