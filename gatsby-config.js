@@ -109,12 +109,13 @@ module.exports = {
               'graphql/impressions/request-panel',
               'graphql/impressions/response-panel',
 
-              'graphql/actions/sending-your-first-request-with-graphql',
-              'graphql/actions/configuring-graphql-end-points',
-              'graphql/actions/using-a-sample',
-              'graphql/actions/observing-the-response-panel',
-              'graphql/actions/saving-a-graphql-request',
-            ],
+              'graphql/actions/run-your-first-graphql-query',
+              'graphql/actions/reviewing-the-response-panel',
+              'graphql/actions/create-you-query-collection',
+              'graphql/actions/saving-graphql-request',
+              'graphql/actions/using-variable-within-a-query',
+              'graphql/actions/uploading-file-within-graphql-request'           
+             ],
 
             WebSocket: [
               "websocket/actions/establishing-your-first-websocket-connection",
