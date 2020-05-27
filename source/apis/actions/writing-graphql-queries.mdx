@@ -17,7 +17,8 @@ import Zoom from 'react-medium-image-zoom';
 2. Set this SpaceX GraphQL API end-point `https://api.spacex.land/graphql` in the `URLbar` input.
 3. Select the `GraphQL queries` item the Quick Body Type Selection section.
 4. Input a below query payload inside the Request Panel.
->`query launchesDetails{
+```graphql
+query launchesDetails{
   __typename
   launches {
     details
@@ -33,7 +34,8 @@ import Zoom from 'react-medium-image-zoom';
     launch_success
     launch_year
   }
-}`
+}
+```
 5. Hit enter and wait for query response from server. 
 
 <Zoom>

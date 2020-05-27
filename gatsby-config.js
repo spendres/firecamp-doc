@@ -3,7 +3,7 @@ const themeOptions = require('gatsby-theme-apollo-docs/theme-options')
 // console.log(themeOptions, `${__dirname}/src/pages`)
 module.exports = {
     siteMetadata: {
-        siteName: "Firecamp document",
+        siteName: "", //"Firecamp document",
         title: 'Firecamp documentation',
         description: 'VS code for API things',
         author: '@Nishchit14',
@@ -17,8 +17,8 @@ module.exports = {
           root: __dirname,
           // subtitle: 'Campsite for API things.',
           description: 'A guide to using Firecamp',
-          // githubRepo: 'firecampapp/firecamp',
-          defaultVersion: '1',
+          githubRepo: 'firecampapp/firecamp-doc',
+          // defaultVersion: '1',
           // versions: {
           //   '1': 'version-1'
           // },
