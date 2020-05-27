@@ -6,51 +6,32 @@ description:
 
 ## Prerequisites
 
-- configure GraphQL queries in which you want to pass the variable.
+1. To elaborate this actions we're using the example of [GraphQL file Upload](https://github.com/jaydenseric/apollo-upload-examples)
+2. You can clone and use this example too. 
+3. Write server `URL` in the URL bar and follow the below steps. 
 
-```graphql
-query GetHistory {
-  __typename
-  histories(limit: 10, offset: 10) {
-    id
-    flight {
-      details
-    }
-  }
-}
-```
 
 ## Directions
 
-1. After writing your query, navigate to the `Variables` area below the playground area. You can define the variable in `JSON`, `Form` and `Table` formate.
-You'll notice, `Query-name` with `Variable` that represent the current query variable. 
-In our example, we have query-name `GetHistory`, pass below variable in query variable are,
-```json 
-{
-  "limit": 10,
-  "offset": 10
-}
-```
+1. Construct the `mutation` with the details you want to insert. For our example we'll write this mutation.
 
-2. Assign the same variable in `Explorer` tab with the `$` and `variable name`, ie. `$limit`
-3. Now pass the function argument with `variable name` and `variable-type` as per below reference code, 
-
-```graphql
-query GetHistory($limit: Int!, $offset: Int!) {
-  __typename
-  histories(limit: $limit, offset: $offset) {
+``` graphql
+mutation multipleUPload($files: [Upload!]!) {
+  multipleUpload(files: $files) {
     id
-    flight {
-      details
-    }
+    filename
+    mimetype
+    path
   }
 }
 ```
+2. After writing your mutation, navigate to the `Files` area in the playground area. Upload the file of your choice with the `Choose files` option. Along with that, assign the 'Name' of the file variable that we'll pass in the mutation function argument. 
+> Incase of multiple uploads, hold the `Ctrl` key while selecting files. 
+
+3. In the `Explorer` tab, assign the variable `files*` with `$` and `Variable-name` that we've used while Uploading files. 
 
 4. Hit the play button.
-
-You can now use any variable same as the above instructions.
-
+5. You'll receive the resp
 ## Short descriptive GIF (w ALT text)
 
 ## Additional resources
