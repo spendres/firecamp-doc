@@ -129,6 +129,22 @@ module.exports = {
               "websocket/impressions/code-snippets-for-websockets",
             ],
 
+            WebSocketV2: [
+              "ws/impressions/url-bar",
+              "ws/impressions/message-playground",
+              "ws/impressions/message-collection",
+              "ws/impressions/connections",
+              "ws/impressions/config",
+              "ws/impressions/code-snippets",
+              "ws/impressions/connection-response-messages",
+
+              "ws/actions/send-your-first-ws-message",
+              "ws/actions/establishing-multiple-ws-connections",
+              "ws/actions/observing-client-server-messages",
+              "ws/actions/preparing-message-collection",
+              "ws/actions/save-ws-request"
+            ],
+
             SocketIO : [
               
             ],
