@@ -131,9 +131,11 @@ module.exports = {
 
             SocketIO : [
               "socket.io/actions/connecting-and-configuring-a-socket-end-point",
-              "socket.io/actions/adding-a-new-event-listener",
+              "socket.io/actions/adding-listeners",
+              "socket.io/actions/setting-up-an-emitter",
+              "socket.io/actions/preparing-emitter-collection",
               "socket.io/actions/saving-your-socketio-requests",
-              "socket.io/actions/setting-up-an-event-emitter",
+
 
               "socket.io/impressions/chatboard-panel",
               "socket.io/impressions/code-snippets-for-socketio",
