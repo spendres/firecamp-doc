@@ -142,7 +142,8 @@ module.exports = {
               "ws/actions/establishing-multiple-ws-connections",
               "ws/actions/observing-client-server-messages",
               "ws/actions/preparing-message-collection",
-              "ws/actions/save-ws-request"
+              "ws/actions/save-ws-request",
+              "ws/actions/switch-between-connections"
             ],
 
             SocketIO : [
