@@ -135,6 +135,7 @@ module.exports = {
               "socket.io/actions/setting-up-an-emitter",
               "socket.io/actions/preparing-emitter-collection",
               "socket.io/actions/saving-your-socketio-requests",
+              "socket.io/actions/generating-code-snippet",
 
 
               "socket.io/impressions/chatboard-panel",
