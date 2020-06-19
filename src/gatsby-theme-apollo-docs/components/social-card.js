@@ -30,7 +30,9 @@ const {fonts, image} = preval`
   };
 `;
 
-export default function SocialCard(props) {
+export default <span>Firecamp</span>
+
+export function SocialCard(props) {
   return (
 		<div
 			style={{
