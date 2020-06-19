@@ -147,13 +147,12 @@ module.exports = {
               
             ],
 
-
             "Discover Firecamp": [
               
             ]
 
           }
         }
-      }
+      },
     ],
   }
