@@ -3,23 +3,28 @@ title: 03. Saving and Managing Messages
 subtitle:
 description: In this action you will learn to save and manage messages in the websockets app.
 ---
+import YouTube from 'react-youtube';
 
-#
-
-Testing and debugging WebSockets takes time and repetitive effort when covering a lot of cases in a distributed team environment. With Firecamp, your team members can save messages inside the WebSocket app for a faster, more convenient debugging experience.
+#Testing and debugging WebSockets takes time and repetitive effort when covering a lot of cases in a distributed team environment. With Firecamp, your team members can save messages inside the WebSocket app for a faster, more convenient debugging experience.
 
 ## Prerequisites
 - Establishing your First WebSocket connection
 - Communicating with the server through messages
 
-We will be using the sample endpoint `ws://echo.websocket.org` to establish the WebSocket connection.
+We will be using the same previous `Bitfinex` API to establish the WebSocket connection.
 
 ## Directions
-1. Open the Firecamp app and click the `WebSocket` option on the homepage.
 
-2. Type the endpoint `ws://echo.websocket.org` in the URL bar if not there already and click the blue `Connect` button.
+1. Type the endpoint `wss://api-pub.bitfinex.com/ws/2` in the URL bar and click the blue `Connect` button.
 
-3. Type a message in the Message panel.
+3. Type a below message in the Message panel.
+```JSON
+{ 
+  "event": "subscribe", 
+  "channel": "trades", 
+  "symbol": "tBTCUSD"
+}
+```
 
 4. To save a message, click the `Send & Save` button next to the `Send` button. This would send the message to the server and save them in the `Message Collection` panel on the right for later use.
 
@@ -32,6 +37,10 @@ We will be using the sample endpoint `ws://echo.websocket.org` to establish the 
  - Alternatively, if you like to delete a message then click the Bin icon that appears on hovering over messages.
 
 Voila! You successfully learned to manage saved messages in Firecamp WebSocket app.
+
+>Check this video on "How to receive message from server"
+
+<YouTube videoId="TQSeTlj32Xs" />
 
 
 ### Short descriptive GIF (w ALT text)
