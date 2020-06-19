@@ -122,11 +122,11 @@ module.exports = {
               "websocket/actions/communicating-with-the-server-through-messages",
               "websocket/actions/saving-and-managing-messages",
 
-              "websocket/impressions/url-bar",
-              "websocket/impressions/message-panel",
-              "websocket/impressions/chatboard-panel",
-              "websocket/impressions/message-collection-panel",
-              "websocket/impressions/code-snippets-for-websockets",
+              // "websocket/impressions/url-bar",
+              // "websocket/impressions/message-panel",
+              // "websocket/impressions/chatboard-panel",
+              // "websocket/impressions/message-collection-panel",
+              // "websocket/impressions/code-snippets-for-websockets",
             ],
 
             SocketIO : [
@@ -138,10 +138,10 @@ module.exports = {
               "socket.io/actions/generating-code-snippet",
 
 
-              "socket.io/impressions/chatboard-panel",
-              "socket.io/impressions/code-snippets-for-socketio",
-              "socket.io/impressions/message-collection-panel",
-              "socket.io/impressions/message-panel",
+              // "socket.io/impressions/chatboard-panel",
+              // "socket.io/impressions/code-snippets-for-socketio",
+              // "socket.io/impressions/message-collection-panel",
+              // "socket.io/impressions/message-panel",
               
 
               
