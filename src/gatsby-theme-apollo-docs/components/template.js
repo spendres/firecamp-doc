@@ -1,100 +1,168 @@
-import React from 'react'
+import CodeBlock from 'gatsby-theme-apollo-docs/src/components/code-block'
+import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
+import PageContent from 'gatsby-theme-apollo-docs/src/components/page-content'
+import PageHeader from 'gatsby-theme-apollo-docs/src/components/page-header'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import React, { Fragment, createContext, useContext } from 'react'
+import SEO from '../../components/Seo/index'
+import rehypeReact from 'rehype-react'
+import styled from '@emotion/styled'
+import { ContentWrapper } from 'gatsby-theme-apollo-core'
+import { MDXProvider } from '@mdx-js/react'
+import { TypescriptApiBoxContext } from 'gatsby-theme-apollo-docs/src/components/typescript-api-box'
+import { graphql, navigate, useStaticQuery } from 'gatsby'
 
-function Seo({ description, lang, meta, keywords, title }) {
+const StyledContentWrapper = styled(ContentWrapper)({
+  paddingBottom: 0,
+})
+
+const CustomLinkContext = createContext()
+
+function CustomLink(props) {
+  const { pathPrefix, baseUrl } = useContext(CustomLinkContext)
+
+  const linkProps = { ...props }
+  if (props.href) {
+    if (props.href.startsWith('/')) {
+      linkProps.onClick = function handleClick(event) {
+        const href = event.target.getAttribute('href')
+        if (href.startsWith('/')) {
+          event.preventDefault()
+          navigate(href.replace(pathPrefix, ''))
+        }
+      }
+    } else if (!props.href.startsWith('#') && !props.href.startsWith(baseUrl)) {
+      linkProps.target = '_blank'
+      linkProps.rel = 'noopener noreferrer'
+    }
+  }
+
+  return <a {...linkProps}>{linkProps.children}</a>
+}
+
+CustomLink.propTypes = {
+  href: PropTypes.string,
+}
+
+const components = {
+  pre: CodeBlock,
+  a: CustomLink,
+}
+
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components,
+}).Compiler
+
+export default function Template(props) {
+
+  const { hash, pathname } = props.location
+
+  const { file, site } = props.data
+
+  let { frontmatter, headings, fields } =
+    file.childMarkdownRemark || file.childMdx
+
+
+  const {
+    sidebarContents,
+    githubUrl,
+    spectrumUrl,
+    typescriptApiBox,
+    baseUrl,
+  } = props.pageContext
+
+  const pages = sidebarContents
+    .reduce((acc, { pages }) => acc.concat(pages), [])
+    .filter(page => !page.anchor)
+
   return (
-    <StaticQuery
-      query={detailsQuery}
-      render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description
-        return (
-          <Helmet
-            htmlAttributes={{
-              lang,
+    <Fragment>
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.description || site.siteMetadata.description}
+      />
+      <StyledContentWrapper>
+        <PageHeader {...frontmatter} />
+        <hr />
+        <PageContent
+          title={frontmatter.title}
+          graphManagerUrl={fields.graphManagerUrl}
+          pathname={pathname}
+          pages={pages}
+          headings={headings}
+          hash={hash}
+          githubUrl={githubUrl}
+          spectrumUrl={spectrumUrl}
+        >
+          <CustomLinkContext.Provider
+            value={{
+              pathPrefix: site.pathPrefix,
+              baseUrl,
             }}
-            title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-            meta={[
-              {
-                name: `description`,
-                content: metaDescription,
-              },
-              {
-                property: `og:title`,
-                content: title,
-              },
-              {
-                property: `og:description`,
-                content: metaDescription,
-              },
-              {
-                property: `og:type`,
-                content: `website`,
-              },
-              {
-                name: `twitter:card`,
-                content: `summary`,
-              },
-              {
-                name: `twitter:creator`,
-                content: data.site.siteMetadata.twitterHandle || "@FirecampHQ",
-              },
-              {
-                name: `twitter:title`,
-                content: title,
-              },
-              {
-                name: `twitter:description`,
-                content: metaDescription,
-              },
-            ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
-                  : []
-              )
-              .concat(meta)}
           >
-            <link
-              href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
-              rel="stylesheet"
-            ></link>
-          </Helmet>
-        )
-      }}
-    />
+            {file.childMdx ? (
+              <TypescriptApiBoxContext.Provider value={typescriptApiBox}>
+                <MDXProvider components={components}>
+                  <MDXRenderer>{file.childMdx.body}</MDXRenderer>
+                </MDXProvider>
+              </TypescriptApiBoxContext.Provider>
+            ) : (
+                renderAst(file.childMarkdownRemark.htmlAst)
+              )}
+          </CustomLinkContext.Provider>
+        </PageContent>
+      </StyledContentWrapper>
+    </Fragment>
   )
 }
 
-Seo.defaultProps = {
-  lang: `en`,
-  meta: [],
-  keywords: [],
+Template.propTypes = {
+  data: PropTypes.object.isRequired,
+  pageContext: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
 }
 
-Seo.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
-}
-
-export default Seo
-
-const detailsQuery = graphql`
-  query DefaultSEOQuery {
+export const pageQuery = graphql`
+  query TemplatePageQuery($id: String) {
     site {
+      pathPrefix
       siteMetadata {
         title
         description
         # twitterHandle
+      }
+    }
+    file(id: { eq: $id }) {
+      childMarkdownRemark {
+        frontmatter {
+          title
+          description
+        }
+        headings {
+          value
+          depth
+        }
+        fields {
+          image
+          graphManagerUrl
+        }
+        htmlAst
+      }
+      childMdx {
+        frontmatter {
+          title
+          description
+        }
+        headings {
+          value
+          depth
+        }
+        fields {
+          image
+          graphManagerUrl
+        }
+        body
       }
     }
   }
