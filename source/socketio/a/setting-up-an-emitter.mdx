@@ -1,0 +1,41 @@
+---
+title: 03. Setting up an Event Emitter
+subtitle:
+description: In this action you will learn to configure an event emitter in the Socket.io integration
+---
+import Zoom from 'react-medium-image-zoom';
+
+## Prerequisites
+
+- A configured and connected Socket.io
+- Active Event listener
+
+## Directions
+
+1. Navigate to the `Emit Event` bar to set up a new event emitter for your Socket.io connection.
+2. Enter the Event Emitter name in the field with the `Emit Event Name` placeholder.  
+3. Enter any args you want to pass as key-value pairs in the `Arguments` tab. You can set multiple arguments by opening a new `Argument` tab.
+> *In our example we'll add Emitter as `add user` and `new message`, add the argument as respectively* 
+``` json 
+{
+  "username" : "Elon Musk"
+}
+``` 
+``` json
+{ 
+"username": "Elon Musk",
+"message": "Hey from Mars...."
+}
+```
+4. Click on the `Emit` button to Emit the event.
+
+Awesome! Your Socket.io connecition is ready to test.
+<Zoom>
+    <img
+        alt="setting-up-an-emitter"
+        src="../assets/actions/setting-up-an-emitter.png"
+        width="100%"
+    />
+</Zoom>
+
+## Additional Resources
