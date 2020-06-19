@@ -130,18 +130,18 @@ module.exports = {
             ],
 
             SocketIO : [
-              "socket.io/a/connecting-and-configuring-a-socket-end-point",
-              "socket.io/a/adding-listeners",
-              "socket.io/a/setting-up-an-emitter",
-              "socket.io/a/preparing-emitter-collection",
-              "socket.io/a/saving-your-socketio-requests",
-              "socket.io/a/generating-code-snippet",
+              "socketio/a/connecting-and-configuring-a-socket-end-point",
+              "socketio/a/adding-listeners",
+              "socketio/a/setting-up-an-emitter",
+              "socketio/a/preparing-emitter-collection",
+              "socketio/a/saving-your-socketio-requests",
+              "socketio/a/generating-code-snippet",
 
 
-              // "socket.io/i/chatboard-panel",
-              // "socket.io/i/code-snippets-for-socketio",
-              // "socket.io/i/message-collection-panel",
-              // "socket.io/i/message-panel",
+              // "socketio/i/chatboard-panel",
+              // "socketio/i/code-snippets-for-socketio",
+              // "socketio/i/message-collection-panel",
+              // "socketio/i/message-panel",
               
 
               
