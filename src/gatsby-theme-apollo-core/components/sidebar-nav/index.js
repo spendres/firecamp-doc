@@ -199,9 +199,9 @@ export default function SidebarNav(props) {
       {props.contents.map(({title, path, pages}, index, array) => {
 
         let rootPages = !title? pages: [];
-        let impressions = pages.filter(p=> /impressions/.test(p.path));
-        let actions = pages.filter(p=> /actions/.test(p.path));
-        let gestures = pages.filter(p=> /gestures/.test(p.path));
+        let impressions = pages.filter(p=> /\/i\//.test(p.path));
+        let actions = pages.filter(p=> /\/a\//.test(p.path));
+        let gestures = pages.filter(p=> /\/g\//.test(p.path));
 
         const contents = [
           generateContent(rootPages, /*<h6># Root </h6>*/),
