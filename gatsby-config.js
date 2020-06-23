@@ -130,20 +130,20 @@ module.exports = {
             ],
 
             WebSocketV2: [
-              "ws/impressions/url-bar",
-              "ws/impressions/message-playground",
-              "ws/impressions/message-collection",
-              "ws/impressions/connections",
-              "ws/impressions/config",
-              "ws/impressions/code-snippets",
-              "ws/impressions/connection-response-messages",
+              "ws/i/url-bar",
+              "ws/i/message-playground",
+              "ws/i/message-collection",
+              "ws/i/connections",
+              "ws/i/config",
+              "ws/i/code-snippets",
+              "ws/i/connection-response-messages",
 
-              "ws/actions/send-your-first-ws-message",
-              "ws/actions/establishing-multiple-ws-connections",
-              "ws/actions/observing-client-server-messages",
-              "ws/actions/preparing-message-collection",
-              "ws/actions/save-ws-request",
-              "ws/actions/switch-between-connections"
+              "ws/a/send-your-first-ws-message",
+              "ws/a/establishing-multiple-ws-connections",
+              "ws/a/observing-client-server-messages",
+              "ws/a/preparing-message-collection",
+              "ws/a/save-ws-request",
+              "ws/a/switch-between-connections"
             ],
 
             SocketIO : [
