@@ -129,6 +129,23 @@ module.exports = {
               // "websocket/i/code-snippets-for-websockets",
             ],
 
+            WebSocketV2: [
+              "ws/i/url-bar",
+              "ws/i/message-playground",
+              "ws/i/message-collection",
+              "ws/i/connections",
+              "ws/i/config",
+              "ws/i/code-snippets",
+              "ws/i/connection-response-messages",
+
+              "ws/a/send-your-first-ws-message",
+              "ws/a/establishing-multiple-ws-connections",
+              "ws/a/observing-client-server-messages",
+              "ws/a/preparing-message-collection",
+              "ws/a/save-ws-request",
+              "ws/a/switch-between-connections"
+            ],
+
             SocketIO : [
               "socketio/a/connecting-and-configuring-a-socket-end-point",
               "socketio/a/adding-listeners",
