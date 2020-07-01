@@ -118,32 +118,26 @@ module.exports = {
              ],
 
             WebSocket: [
-              "websocket/a/establishing-your-first-websocket-connection",
-              "websocket/a/communicating-with-the-server-through-messages",
-              "websocket/a/saving-and-managing-messages",
+              "websocket/i/url-bar",
+              "websocket/i/message-playground",
+              "websocket/i/message-collection",
+              "websocket/i/connections",
+              "websocket/i/config",
+              "websocket/i/code-snippets",
+              "websocket/i/connection-response-messages",
+
+              "websocket/a/send-your-first-ws-message",
+              "websocket/a/establishing-multiple-ws-connections",
+              "websocket/a/observing-client-server-messages",
+              "websocket/a/preparing-message-collection",
+              "websocket/a/save-ws-request",
+              "websocket/a/switch-between-connections"
 
               // "websocket/i/url-bar",
               // "websocket/i/message-panel",
               // "websocket/i/chatboard-panel",
               // "websocket/i/message-collection-panel",
               // "websocket/i/code-snippets-for-websockets",
-            ],
-
-            WebSocketV2: [
-              "ws/i/url-bar",
-              "ws/i/message-playground",
-              "ws/i/message-collection",
-              "ws/i/connections",
-              "ws/i/config",
-              "ws/i/code-snippets",
-              "ws/i/connection-response-messages",
-
-              "ws/a/send-your-first-ws-message",
-              "ws/a/establishing-multiple-ws-connections",
-              "ws/a/observing-client-server-messages",
-              "ws/a/preparing-message-collection",
-              "ws/a/save-ws-request",
-              "ws/a/switch-between-connections"
             ],
 
             SocketIO : [
