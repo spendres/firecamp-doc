@@ -3,6 +3,7 @@ const themeOptions = require('gatsby-theme-apollo-docs/theme-options')
 // console.log(themeOptions, `${__dirname}/src/pages`)
 module.exports = {
     siteMetadata: {
+        siteUrl: `https://doc.firecamp.io`,
         siteName: "", //"Firecamp document",
         title: 'Firecamp documentation',
         description: 'VS code for API things',
@@ -10,6 +11,7 @@ module.exports = {
     },
     pathPrefix: '/',
     plugins: [
+      "gatsby-plugin-sitemap",
       {
         resolve: 'gatsby-theme-apollo-docs',
         options: {
@@ -83,56 +85,80 @@ module.exports = {
               "discover-firecamp/firecamp-for-teams/workspaces",
             ],
             "HTTP APIs": [
-              'apis/actions/sending-your-first-request',
-              'apis/actions/observing-the-response-panel',
-              'apis/actions/saving-your-requests',
-              'apis/actions/generating-code-snippets',
-              'apis/actions/writing-graphql-queries',
-              'apis/actions/running-graphql-query',
+              'http/a/sending-your-first-request',
+              'http/a/observing-the-response-panel',
+              'http/a/saving-your-requests',
+              'http/a/generating-code-snippets',
+              'http/a/writing-graphql-queries',
+              'http/a/running-graphql-query',
 
-              'apis/impressions/url-bar',
-              'apis/impressions/request-panel',
-              'apis/impressions/request-body',
-              'apis/impressions/authentications',
-              'apis/impressions/headers',
-              'apis/impressions/query-parameters',
-              'apis/impressions/response-panel',
-              'apis/impressions/code-generator-for-requests',
+              'http/i/url-bar',
+              'http/i/request-panel',
+              'http/i/request-body',
+              'http/i/authentications',
+              'http/i/headers',
+              'http/i/query-parameters',
+              'http/i/response-panel',
+              'http/i/code-generator-for-requests',
             ],
 
             GraphQL: [
-              'graphql/impressions/url-bar',
-              'graphql/impressions/request-methods',
-              'graphql/impressions/playground',
-              'graphql/impressions/collections',
-              'graphql/impressions/explorer',
-              'graphql/impressions/request-panel',
-              'graphql/impressions/response-panel',
+              'graphql/i/url-bar',
+              'graphql/i/request-methods',
+              'graphql/i/playground',
+              'graphql/i/collections',
+              'graphql/i/explorer',
+              'graphql/i/request-panel',
+              'graphql/i/response-panel',
 
-              'graphql/actions/run-your-first-graphql-query',
-              'graphql/actions/reviewing-the-response-panel',
-              'graphql/actions/create-you-query-collection',
-              'graphql/actions/saving-graphql-request',
-              'graphql/actions/using-variable-within-a-query',
-              'graphql/actions/uploading-file-within-graphql-request'           
+              'graphql/a/run-your-first-graphql-query',
+              'graphql/a/reviewing-the-response-panel',
+              'graphql/a/create-you-query-collection',
+              'graphql/a/saving-graphql-request',
+              'graphql/a/using-variable-within-a-query',
+              'graphql/a/uploading-file-within-graphql-request'           
              ],
 
             WebSocket: [
-              "websocket/actions/establishing-your-first-websocket-connection",
-              "websocket/actions/communicating-with-the-server-through-messages",
-              "websocket/actions/saving-and-managing-messages",
+              "websocket/i/url-bar",
+              "websocket/i/message-playground",
+              "websocket/i/message-collection",
+              "websocket/i/connections",
+              "websocket/i/config",
+              "websocket/i/code-snippets",
+              "websocket/i/connection-response-messages",
 
-              "websocket/impressions/url-bar",
-              "websocket/impressions/message-panel",
-              "websocket/impressions/chatboard-panel",
-              "websocket/impressions/message-collection-panel",
-              "websocket/impressions/code-snippets-for-websockets",
+              "websocket/a/send-your-first-ws-message",
+              "websocket/a/establishing-multiple-ws-connections",
+              "websocket/a/observing-client-server-messages",
+              "websocket/a/preparing-message-collection",
+              "websocket/a/save-ws-request",
+              "websocket/a/switch-between-connections"
+
+              // "websocket/i/url-bar",
+              // "websocket/i/message-panel",
+              // "websocket/i/chatboard-panel",
+              // "websocket/i/message-collection-panel",
+              // "websocket/i/code-snippets-for-websockets",
             ],
 
             SocketIO : [
+              "socketio/a/connecting-and-configuring-a-socket-end-point",
+              "socketio/a/adding-listeners",
+              "socketio/a/setting-up-an-emitter",
+              "socketio/a/preparing-emitter-collection",
+              "socketio/a/saving-your-socketio-requests",
+              "socketio/a/generating-code-snippet",
+
+
+              // "socketio/i/chatboard-panel",
+              // "socketio/i/code-snippets-for-socketio",
+              // "socketio/i/message-collection-panel",
+              // "socketio/i/message-panel",
+              
+
               
             ],
-
 
             "Discover Firecamp": [
               
@@ -140,6 +166,6 @@ module.exports = {
 
           }
         }
-      }
+      },
     ],
   }
