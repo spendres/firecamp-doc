@@ -3,6 +3,7 @@ const themeOptions = require('gatsby-theme-apollo-docs/theme-options')
 // console.log(themeOptions, `${__dirname}/src/pages`)
 module.exports = {
     siteMetadata: {
+        siteUrl: `https://doc.firecamp.io`,
         siteName: "", //"Firecamp document",
         title: 'Firecamp documentation',
         description: 'VS code for API things',
@@ -10,6 +11,7 @@ module.exports = {
     },
     pathPrefix: '/',
     plugins: [
+      "gatsby-plugin-sitemap",
       {
         resolve: 'gatsby-theme-apollo-docs',
         options: {
