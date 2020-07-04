@@ -205,8 +205,8 @@ export default function SidebarNav(props) {
 
         const contents = [
           generateContent(rootPages, /*<h6># Root </h6>*/),
-          generateContent(impressions, <h6># Impressions </h6>),
           generateContent(actions, <h6># Actions </h6>),
+          generateContent(impressions, <h6># Impressions </h6>),
           generateContent(gestures, <h6># Gestures </h6>),
         ]
 
