@@ -104,12 +104,12 @@ module.exports = {
 
             GraphQL: [
               'graphql/i/url-bar',
+              'graphql/i/request-panel',
+              'graphql/i/response-panel',
               'graphql/i/request-methods',
               'graphql/i/playground',
               'graphql/i/collections',
               'graphql/i/explorer',
-              'graphql/i/request-panel',
-              'graphql/i/response-panel',
 
               'graphql/a/run-your-first-graphql-query',
               'graphql/a/reviewing-the-response-panel',
