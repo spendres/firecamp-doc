@@ -1,7 +1,9 @@
 {
   "scripts": {
     "prestart": "gatsby clean",
-    "start": "gatsby develop"
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "gatsby": "^2.20.26",
