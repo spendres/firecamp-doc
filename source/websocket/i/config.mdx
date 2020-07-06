@@ -4,6 +4,9 @@ subtitle:
 description: 
 ---
 
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
+
 ## Overflow
 Here in **Config Tab** in WebSocket client, you can find multiple options to configure WS connection. Following is the list of options with a specific purpose.
 
@@ -24,6 +27,14 @@ Here are options which can be used to configure WS connection.
 | 10. | `protocol_version` <br/> <small>Desktop Only</small> | Value of the `Sec-WebSocket-Version` header. <br/> The WebSocket protocol version the client wishes to use when communicating with the server. This number should be the most recent version possible listed in the [IANA WebSocket Version Number Registry][10]. The most recent final version of the WebSocket protocol is version 13. <br/>[More from reference][10.1]|
 | 11. | `origin` <br/> <small>Desktop Only</small> | The `Origin` request header indicates where a fetch originates from. It doesn't include any path information, but only the server name. |
 | 12. | `max_payload` <br/> <small>Desktop Only</small> | The maximum allowed message size in bytes. <br/> [Know more from reference][12]|
+
+<Zoom>
+    <img
+        alt="Config"
+        src="../assets/websocket-configuration.png"
+        width="100%"
+    />
+</Zoom>
 
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism
