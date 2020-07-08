@@ -4,6 +4,9 @@ subtitle:
 description: 
 ---
 
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
+
 ## Overview
 Also known as **Response Panel** or **Messages Panel**, placed at right side pane in WebSocket client. This panel will show all the messages sent from the Firecamp's WS client and received from the WS server in a very intuitive chat-board like debugging UI.
 
@@ -20,5 +23,10 @@ This feature-rich chat-board like **Response-Panel** has many small control-butt
 | 3. | Message Alignments | Align message list to `right`, `left` of `center` |
 | 4. | Clear all messages | Clear all messages from current connections |
 
-
-TODO: Image representing the above controls
+<Zoom>
+    <img
+        alt="Config"
+        src="../assets/client-server-message.png"
+        width="100%"
+    />
+</Zoom>
