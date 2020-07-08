@@ -6,7 +6,7 @@ module.exports = {
         siteUrl: `https://doc.firecamp.io`,
         siteName: "", //"Firecamp document",
         title: 'Firecamp documentation',
-        description: 'VS code for API things',
+        description: 'Execute and Manage APIs of your choice [HTTP, GraphQL, WebSocket,...]',
         author: '@Nishchit14',
     },
     pathPrefix: '/',
